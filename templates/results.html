@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scan Results</title>
+</head>
+<body>
+    <h1>Scan Results for {{ target }}</h1>
+    {% if error %}
+        <p>Error: {{ error }}</p>
+    {% else %}
+        {% if open_ports %}
+            <table border="1">
+                <tr>
+                    <th>Port</th>
+                    <th>State</th>
+                    <th>Service</th>
+                </tr>
+                {% for port in open_ports %}
+                <tr>
+                    <td>{{ port.port }}</td>
+                    <td>{{ port.state }}</td>
+                    <td>{{ port.service }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>No open ports found.</p>
+        {% endif %}
+    {% endif %}
+    <a href="/">Go Back</a>
+</body>
+</html>
