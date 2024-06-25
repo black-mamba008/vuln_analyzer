@@ -1,84 +1,75 @@
+# Vulnerability Scanner
 
----
+A simple web-based vulnerability scanner using Flask and Nmap to scan target IP addresses or domains for open ports and HTTP header vulnerabilities.
 
-# Password Strength Checker
+## Project Overview
 
-A simple web application to assess the strength of a password based on its length, complexity, and uniqueness. This project uses Flask for the backend and HTML, CSS, and JavaScript for the frontend.
+This project aims to provide a simple interface for scanning target IP addresses or domains for open ports and HTTP header vulnerabilities. The scanner uses Nmap to detect open ports and runs checks to identify common security issues in HTTP headers.
 
 ## Features
 
-- Evaluates password strength based on length, presence of uppercase and lowercase letters, numbers, special characters, and common patterns.
-- Provides feedback on how to improve password strength.
-- Simple and clean user interface.
+- Scan target IP addresses or domains for open ports using Nmap.
+- Detect HTTP header vulnerabilities.
+- Simple and intuitive web-based interface.
+- Display scan results in an easy-to-read format.
 
-## Getting Started
+## Installation
 
 ### Prerequisites
 
-- Python 3.x
+- Python 3.6+
 - Flask
+- Nmap installed and added to the system PATH
 
-### Installation
+### Steps
 
 1. Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/vulnerability-scanner.git
+    cd vulnerability-scanner
+    ```
 
-```sh
-git clone https://github.com/your-username/password-strength-checker.git
-cd password-strength-checker
-```
+2. Create and activate a virtual environment (optional but recommended):
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
 
-2. Set up a virtual environment and activate it:
+3. Install the required Python packages:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-```sh
-python -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-```
+4. Ensure Nmap is installed on your system. You can download it from [Nmap's official site](https://nmap.org/download.html).
 
-3. Install the required packages:
+## Usage
 
-```sh
-pip install flask
-```
+1. Run the Flask application:
+    ```bash
+    python app.py
+    ```
 
-### Running the Application
+2. Open a web browser and navigate to `http://127.0.0.1:5000`.
 
-1. Start the Flask server:
+3. Enter the target IP address or domain you want to scan and click "Scan".
 
-```sh
-python app.py
-```
-
-2. Open your web browser and navigate to:
-
-```
-http://127.0.0.1:5000/
-```
-
-3. Enter a password in the input field and click the "Check Strength" button to see the password strength and feedback.
+4. View the scan results on the same page.
 
 ## Project Structure
 
 ```
-password_strength_checker/
-│
-├── app.py          # Flask backend application
-├── index.html      # HTML frontend
-├── styles.css      # CSS for styling
-└── script.js       # JavaScript for frontend functionality
+vulnerability-scanner/
+├── static/
+│ ├── styles.css
+├── templates/
+│ ├── index.html
+│ ├── results.html
+├── app.py
+├── requirements.txt
+└── README.md
 ```
-
-## Usage
-
-- Open the application in a web browser.
-- Enter a password in the input field.
-- Click the "Check Strength" button.
-- View the password strength and feedback provided below the input field
-
-
 ## Contact
 
 If you have any questions or suggestions, feel free to contact me at shahulhameedmaheen2001@gmail.com.
 
 ---
-
-
